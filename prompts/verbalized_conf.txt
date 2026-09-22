@@ -1,0 +1,7 @@
+You will be shown a user request and the answer you gave.
+
+Estimate the probability that your answer is correct and useful, as an
+integer from 0 to 100, where 0 means certainly wrong and 100 means
+certainly right.
+
+Output only the integer. No words, no percent sign, no explanation.
