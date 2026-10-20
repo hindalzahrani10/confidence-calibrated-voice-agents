@@ -60,7 +60,7 @@ The prediction held. As noise increased, the agent generated clarification quest
 | Clarifying question itself unclear/illogical | 4 | `underspec_003` |
 | Ambiguity missed (answered when unclear) | 6 | `underspec_000` |
 
-**Extracted Failure Examples:**
+**Sample Transcript Failure Cases:**
 1. **Item `underspec_000` (Clean Audio)**
    * **Transcript:** "Set an alarm."
    * **Agent Asked:** "Do you want to set an alarm for today or tomorrow?"
@@ -81,6 +81,3 @@ The prediction held. As noise increased, the agent generated clarification quest
 
 ### Threats to this result
 Small sample size (n=20) and use of a smaller model (1.5B) limit the generalizability of the exact success rates. The LLM's weak reasoning capability may be conflating standard ambiguity resolution with instruction-following failures.
-
-### Decision
-Push these baseline results to document the exact failure mode (noise-induced contextual collapse and unhelpful clarification loops). Move immediately to formulating the NM-VoI policy and upgrading to a 7B/8B model on cloud compute for the next closed-loop simulator run.
