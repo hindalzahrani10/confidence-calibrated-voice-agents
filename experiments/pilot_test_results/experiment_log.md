@@ -3,7 +3,7 @@
 ## Run ID: `2026-10-08-qwen-pilot-debug`
 
 **Date:** 2026-10-08
-**Config:** `configs/pilot_debug.yaml` (Local M1 Mac)
+**Config:** `configs/pilot_debug.yaml` (Local M1 Mac).
 **Commit:** `[Insert your latest commit hash]`
 **Seed(s):** 42
 
