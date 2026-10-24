@@ -54,7 +54,8 @@ Crucially, the true utility received is evaluated against the *actual* underlyin
 
 $$EU_{\text{NM-VoI}}(a_q) = \mathbb{E}_{y \sim b_0(y)} \left[ \mathbb{E}_{\hat{y} \sim p(\hat{y} | y, \text{SNR}, a_q)} \left[ R(a^*(\hat{y}), y) \right] \right] - C(a_q)$$
 
-**Why this models failure:** If the ASR channel is noisy, the transcript $\hat{y}$ will be corrupted. This distorts the agent's updated belief $b_1(y \mid \hat{y})$, causing it to select an incorrect downstream action \(a^*(\hat{y})\) and incur a penalty \(R(a^*(\hat{y}), y) = -1\). The outer expectation automatically penalizes $EU_{\text{NM-VoI}}(a_q)$ in low SNR environments.
+**Why this models failure:** If the ASR channel is noisy, the transcript $\hat{y}$ will be corrupted. This distorts the agent's updated belief $b_1(y \mid \hat{y})$, causing it to select an incorrect downstream action $a^*(\hat{y})$ and incur a penalty $R(a^*(\hat{y}), y) = -1$. The outer expectation automatically penalizes $EU_{\text{NM-VoI}}(a_q)$ in low SNR environments.
+
 
 ## 5. References
 *   Bohus, D., & Rudnicky, A. I. (2005). *Sorry, I didn't catch that! - An investigation of non-understanding errors and recovery strategies.* SIGdial.
