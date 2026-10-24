@@ -33,23 +33,29 @@ $$EU_{standard\_ask}(a_q) = \mathbb{E}_{y \sim P(y|x)} \left[ \max_{a'} U(a', x 
 **The Flaw:** Standard EVPI assumes a perfect observation channel where $p(\hat{y} | y) = 1$. It entirely fails to account for the probability that the user's reply $y$ will be corrupted by acoustic noise during transcription.
 
 ## 4. Noise-Marginalized Value of Information (NM-VoI)
-We introduce the **noisy observation channel**. The user's true reply $y$ is observed by the agent as transcript $\hat{y}$ through an ASR model. The probability of correct recognition is conditioned on both the background Signal-to-Noise Ratio (SNR) and the structural type of question asked:
 
-$$p(\hat{y} | y, \text{SNR}, a_q)$$
+### 4.1 Noisy Observation Channel & Empirical Lookup
+We introduce a noisy observation channel where the user's spoken clarification $y$ is transcribed as $\hat{y}$ via an ASR model. The observation probability $p(\hat{y} | y, \text{SNR}, a_q)$ is conditioned on the background Signal-to-Noise Ratio (SNR) and the structural type of question asked $a_q \in \{a_{open}, a_{closed}, a_{conf}\}$. 
 
-A yes/no confirmation ($a_{conf}$) possesses a significantly higher probability of correct recognition under low SNR than a free-form open response ($a_{open}$). We redefine the utility of asking a question by marginalizing over the predicted acoustic noise of the user's impending response:
+In our implementation, $p(\hat{y} | y, \text{SNR}, a_q)$ is empirically estimated by benchmarking sample response recognition rates across discrete SNR buckets (Clean, 20 dB, 10 dB, 5 dB) for each question modality.
 
-$$EU_{NM-VoI}(a_q) = \mathbb{E}_{y \sim P(y|x)} \left[ \mathbb{E}_{\hat{y} \sim p(\hat{y} | y, \text{SNR}, a_q)} \left[ \max_{a'} U(a', x \oplus a_q \oplus \hat{y}) \right] \right] - C(a_q)$$
+### 4.2 Belief Update and One-Step Lookahead Policy
+We assume a **one-step lookahead decision horizon**. Let $b_0(y) = P(y|x)$ be the agent's prior belief over the true intent $y$ given the initial prompt $x$. 
 
-**Decision Rule:**
-The agent executes the action that maximizes the noise-marginalized expected utility:
-$$a^* = \arg\max_{a \in A} \begin{cases} 
-      EU(a_{ans}) \\
-      EU_{NM-VoI}(a_{open}) \\
-      EU_{NM-VoI}(a_{closed}) \\
-      EU_{NM-VoI}(a_{conf}) \\
-      U(a_{abs})
-   \end{cases}$$
+When the agent asks clarification question $a_q$, the user utters their true intent $y$, which is transcribed as noisy observation $\hat{y} \sim p(\hat{y} | y, \text{SNR}, a_q)$. Upon observing $\hat{y}$, the agent updates its belief via Bayesian inference / prompt context concatenation:
+
+$$b_1(y \mid \hat{y}) = P(y \mid x, a_q, \hat{y})$$
+
+Under this updated belief $b_1$, the agent selects the candidate action $a^*(\hat{y})$ that maximizes expected task reward:
+
+$$a^*(\hat{y}) = \arg\max_{a'} \mathbb{E}_{y \sim b_1(y \mid \hat{y})} [R(a', y)]$$
+
+Crucially, the true utility received is evaluated against the *actual* underlying intent $y$. The Noise-Marginalized Expected Utility of asking question $a_q$ is therefore:
+
+$$EU_{\text{NM-VoI}}(a_q) = \mathbb{E}_{y \sim b_0(y)} \left[ \mathbb{E}_{\hat{y} \sim p(\hat{y} | y, \text{SNR}, a_q)} \left[ R(a^*(\hat{y}), y) \right] \right] - C(a_q)$$
+
+**Why this models failure:** If the ASR channel is noisy, the transcript $\hat{y}$ will be corrupted. This distorts the agent's updated belief $b_1(y \mid \hat{y})$, causing it to select an incorrect downstream action $a^*(\hat{y})$ and incur a penalty $R(a^*(\hat{y}), y) = -1$. The outer expectation automatically penalizes $EU_{\text{NM-VoI}}(a_q)$ in low SNR environments.
+
 
 ## 5. References
 *   Bohus, D., & Rudnicky, A. I. (2005). *Sorry, I didn't catch that! - An investigation of non-understanding errors and recovery strategies.* SIGdial.
