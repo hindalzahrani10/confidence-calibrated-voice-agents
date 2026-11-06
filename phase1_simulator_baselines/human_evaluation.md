@@ -73,3 +73,17 @@ These answers have **not** been provided yet. Until they are, the affected ratin
 3. **D16 vs D17:** both abstained after an unusable reply but were rated `Y` and `N`. What does "final action correct" mean for an abstention?
 4. **D03:** reply appropriateness is `N`, but the note says the reply "Dan" was heard. Does `N` refer to the recognised reply ("Then")?
 5. **D19:** audio/ASR consistency is `Y`, but the note says the utterance could not be identified at 5 dB. Does `Y` mean the ASR matched the reference?
+
+### Author clarifications (6 November 2026)
+
+1. **D01:** The author considers abstention appropriate because the audio was too unclear to justify executing a command. Final-action-correct: Y (author judgment). Overall-valid: N (author judgment), because the author felt the audio was too unclear to evaluate reliably. This is a subjective usability judgment, not evidence that noisy examples should automatically be excluded.
+
+2. **D10:** Final-action-correct: N (correcting the original Y rating). The spoken request, "Book Paris for June," did not specify a hotel or flight. The agent selected a flight without sufficient evidence, whereas clarification was preferable. Overall-valid: Y; this is a meaningful ambiguity-handling example. The hidden gold specifies a hotel, which was not explicit in the utterance.
+
+3. **D16 and D17:** Both cases ended in abstention after a clarification reply that ASR recognized but the parser could not use. In D16, "7 in the morning" was recognized but parsed as None; the author considers the clarification question too generic and the task outcome unsuccessful, while abstention was defensible given the unresolved internal belief. In D17, "Jazz" was recognized but parsed as None; the author considers the clarification question appropriate, but the final task still failed. The earlier differing final-action ratings reflected an inconsistent interpretation of whether to judge the safety of abstention or task completion; these should be treated as separate dimensions. The author considers both dialogues valid evaluation examples.
+
+4. **D03:** The author heard the intended name "Dan" clearly in the reply, but ASR recognized "Then" and the parser returned None. Thus the reply-appropriateness N rating should not be interpreted as the simulated user giving an inappropriate reply; it reflects the failed recognition/processing of an appropriate reply. The generic clarification was not well targeted, and the agent ultimately abstained. Overall-valid: Y.
+
+5. **D19:** The author found the initial audio partially unclear (approximately "turn up the vol...") but the ASR correctly recovered "Turn up the volume." The clarification reply "Living room speaker" was clear to the author, correctly recognized, and successfully parsed. The audio/ASR consistency Y rating refers to the ASR matching the intended transcript, not to perfect human intelligibility of the initial audio. The final action was correct; overall-valid: Y.
+
+**Evaluation integrity:** These are retrospective author clarifications. The frozen v1 episodes, automated outcomes, and previously reported aggregate statistics remain unchanged. Any correction to the original human-rating dataset should be tracked explicitly and corresponding statistics recomputed before being reported as revised results.

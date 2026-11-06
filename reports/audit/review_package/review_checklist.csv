@@ -1,0 +1,21 @@
+dialogue_id,episode_key,split,base_id,category,snr_db,policy,decision,final,utility,auto_flags,initial_audio,reply_audio,H_question_relevance(1-5 or Y/N),H_reply_appropriateness,H_audio_asr_consistency,H_final_action_correct,H_overall_valid(Y/N/unsure),H_notes,H_reviewed_by_human
+D01,evpi|uf38d6672-b,train,p1_acoustic_01,acoustic,10,evpi,abstain,abstain,0.0,F8; F13,audio/D01_initial__uf38d6672-b.wav,,,,,,,,NO
+D02,nm_voi|ua69ef8a4-d,val,p1_acoustic_10,acoustic,20,nm_voi,ask_confirm,answer,0.9,F10,audio/D02_initial__ua69ef8a4-d.wav,audio/D02_reply__rbd3882a7b2.wav,,,,,,,NO
+D03,nm_voi|u8044439b-a,train,p1_acoustic_02,acoustic,20,nm_voi,ask_open,abstain,-0.3,F8; F1; F2; F10,audio/D03_initial__u8044439b-a.wav,audio/D03_reply__readd46da38.wav,,,,,,,NO
+D04,always_ask|u232a951f-d,val,p1_acoustic_09,acoustic,clean,always_ask,ask_closed,answer,0.8,F1; F2; F10,audio/D04_initial__u232a951f-d.wav,audio/D04_reply__r89693be0fd.wav,,,,,,,NO
+D05,noise_indep_voi|ue549cc1b-b,train,p1_acoustic_05,acoustic,clean,noise_indep_voi,ask_confirm,answer,0.9,F10,audio/D05_initial__ue549cc1b-b.wav,audio/D05_reply__r4e4dc5146c.wav,,,,,,,NO
+D06,nm_voi|u83a16275-c,train,p1_intent_03,intent,20,nm_voi,ask_open,answer,0.7,F6,audio/D06_initial__u83a16275-c.wav,audio/D06_reply__r0e695010e2.wav,,,,,,,NO
+D07,never_ask|u80493a1a-d,train,p1_intent_02,intent,5,never_ask,answer,answer,1.0,F6,audio/D07_initial__u80493a1a-d.wav,,,,,,,,NO
+D08,noise_indep_voi|u9a21f58d-c,train,p1_intent_01,intent,5,noise_indep_voi,abstain,abstain,0.0,F6; F8; F13,audio/D08_initial__u9a21f58d-c.wav,,,,,,,,NO
+D09,confidence_threshold|ua7eec175-c,val,p1_intent_09,intent,clean,confidence_threshold,ask_closed,answer,0.8,F6,audio/D09_initial__ua7eec175-c.wav,audio/D09_reply__rf4df748e2b.wav,,,,,,,NO
+D10,never_ask|uc41613fa-d,train,p1_intent_07,intent,clean,never_ask,answer,answer,-1.0,F6,audio/D10_initial__uc41613fa-d.wav,,,,,,,,NO
+D11,never_ask|u259d5ac3-b,train,p1_none_07,none,10,never_ask,answer,answer,1.0,,audio/D11_initial__u259d5ac3-b.wav,,,,,,,,NO
+D12,always_ask|ucc9d9795-a,train,p1_none_03,none,20,always_ask,ask_closed,answer,0.8,F10,audio/D12_initial__ucc9d9795-a.wav,audio/D12_reply__rf9953a9794.wav,,,,,,,NO
+D13,noise_indep_voi|ue5b18d4f-a,train,p1_none_04,none,20,noise_indep_voi,ask_confirm,answer,0.9,F10,audio/D13_initial__ue5b18d4f-a.wav,audio/D13_reply__r8ed73455ca.wav,,,,,,,NO
+D14,confidence_threshold|u5a8e443a-d,train,p1_none_06,none,5,confidence_threshold,answer,answer,1.0,,audio/D14_initial__u5a8e443a-d.wav,,,,,,,,NO
+D15,evpi|u71fbfd32-d,val,p1_none_10,none,5,evpi,ask_confirm,answer,0.9,F6; F10,audio/D15_initial__u71fbfd32-d.wav,audio/D15_reply__r0ed19644a7.wav,,,,,,,NO
+D16,evpi|u32a3480f-b,train,p1_underspec_01,underspecified,10,evpi,ask_open,abstain,-0.3,F6; F2,audio/D16_initial__u32a3480f-b.wav,audio/D16_reply__r8c4a60d1b1.wav,,,,,,,NO
+D17,evpi|u7bb0180c-d,train,p1_underspec_03,underspecified,10,evpi,ask_open,abstain,-0.3,F6; F2; F10,audio/D17_initial__u7bb0180c-d.wav,audio/D17_reply__r1341226200.wav,,,,,,,NO
+D18,noise_indep_voi|u89655f2b-c,val,p1_underspec_08,underspecified,10,noise_indep_voi,abstain,abstain,0.0,F6,audio/D18_initial__u89655f2b-c.wav,,,,,,,,NO
+D19,confidence_threshold|u4136e82e-d,train,p1_underspec_06,underspecified,5,confidence_threshold,ask_closed,answer,0.8,F6,audio/D19_initial__u4136e82e-d.wav,audio/D19_reply__r328b3ee848.wav,,,,,,,NO
+D20,always_ask|u38f57003-b,val,p1_underspec_09,underspecified,clean,always_ask,ask_closed,answer,-1.2,F6; F9,audio/D20_initial__u38f57003-b.wav,audio/D20_reply__r97129b188a.wav,,,,,,,NO

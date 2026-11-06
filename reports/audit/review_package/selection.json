@@ -1,0 +1,25 @@
+{
+ "rule": "3 nm_voi-vs-noise_indep_voi disagreements, up to 3 flagged asking dialogues (F2/F3/F4/F9), rest greedy coverage of category/SNR/decision/policy; one dialogue per base item; deterministic (seed 1234 hash order); dev (train/val) only",
+ "episodes": [
+  "evpi|uf38d6672-b",
+  "nm_voi|ua69ef8a4-d",
+  "nm_voi|u8044439b-a",
+  "always_ask|u232a951f-d",
+  "noise_indep_voi|ue549cc1b-b",
+  "nm_voi|u83a16275-c",
+  "never_ask|u80493a1a-d",
+  "noise_indep_voi|u9a21f58d-c",
+  "confidence_threshold|ua7eec175-c",
+  "never_ask|uc41613fa-d",
+  "never_ask|u259d5ac3-b",
+  "always_ask|ucc9d9795-a",
+  "noise_indep_voi|ue5b18d4f-a",
+  "confidence_threshold|u5a8e443a-d",
+  "evpi|u71fbfd32-d",
+  "evpi|u32a3480f-b",
+  "evpi|u7bb0180c-d",
+  "noise_indep_voi|u89655f2b-c",
+  "confidence_threshold|u4136e82e-d",
+  "always_ask|u38f57003-b"
+ ]
+}

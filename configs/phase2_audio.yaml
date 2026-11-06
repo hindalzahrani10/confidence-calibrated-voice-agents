@@ -1,0 +1,62 @@
+# Phase 2 audio generation. Everything the audio depends on lives here (+ the
+# snr_levels in configs/default.yaml), so a rebuild is reproducible from this
+# file, the Phase 1 snapshot and the recorded asset hashes.
+# All speech is SYNTHETIC (TTS); it is not natural human speech.
+
+version: audio.v1
+phase1_snapshot: data/phase1/snapshots/phase1.v2.0+05471eebec39
+out_root: data/phase2
+
+format:
+  sample_rate: 16000
+  subtype: PCM_16
+  channels: 1
+  pcm_scale: 32767
+
+tts:
+  engine: piper
+  model: data/models/piper/en_US-lessac-medium.onnx
+  model_sha256: 5efe09e69902187827af646e1a6e9d269dee769f9877d17b16b1b46eeaaf019f
+  model_config_sha256: efe19c417bed055f2d69908248c6ba650fa135bc868b0e6abb3da181dab690a0
+  language: en_US
+  # Sampling noise off so synthesis is deterministic.
+  length_scale: 1.0
+  noise_scale: 0.0
+  noise_w_scale: 0.0
+  normalize_audio: false
+
+padding_s:
+  leading: 0.5
+  trailing: 0.75
+
+# Active-speech level: mean square over 20 ms frames within `dynamic_range_db`
+# of the loudest frame (a simplified ITU-T P.56-style measure, not full P.56).
+active_level:
+  frame_ms: 20
+  hop_ms: 10
+  dynamic_range_db: 30
+speech_level_db: -26.0   # 10*log10(active mean-square), re 1.0 full scale
+
+noise:
+  # One real ambient recording for the main experiment (DEMAND, CC BY 4.0).
+  asset_id: DEMAND_PCAFETER_ch01_16k
+  path: data/noise/DEMAND_PCAFETER_ch01_16k.wav
+  sha256: 854dd0e5ef334a66abdd02d6d2b3e9d01b685df033d0acd1cd06e471c062550b
+  # Disjoint time ranges (seconds) so held-out noise is never seen in development.
+  partitions:
+    train: [0, 180]
+    val: [180, 240]
+    test: [240, 300]
+
+# Noisy clips per (clip, SNR). Clean clips are never duplicated.
+# Reply replicates are 1 because ASR costs ~5.5 s/clip on this 2-vCPU host.
+replicates:
+  initial: 1
+  reply: 1
+
+tolerances:
+  snr_db: 0.1
+  level_db: 0.5
+  reconstruct_lsb: 1
+  peak_max: 0.99
+  duration_s: [0.5, 8.0]

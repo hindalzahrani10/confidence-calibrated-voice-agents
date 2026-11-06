@@ -1,0 +1,338 @@
+{
+ "n": 20,
+ "n_asked": 13,
+ "n_not_asked": 7,
+ "question_rating": {
+  "n": 13,
+  "mean": 3.85,
+  "median": 5,
+  "min": 1,
+  "max": 5,
+  "q1": 3,
+  "q3": 5,
+  "counts": {
+   "1": 1,
+   "2": 2,
+   "3": 2,
+   "4": 1,
+   "5": 7
+  }
+ },
+ "question_rating_by_question_type": {
+  "closed": {
+   "n": 5,
+   "mean": 3.6,
+   "median": 5,
+   "min": 1,
+   "max": 5,
+   "q1": 2,
+   "q3": 5,
+   "counts": {
+    "1": 1,
+    "2": 1,
+    "5": 3
+   }
+  },
+  "confirm": {
+   "n": 4,
+   "mean": 5,
+   "median": 5.0,
+   "min": 5,
+   "max": 5,
+   "q1": 5,
+   "q3": 5,
+   "counts": {
+    "5": 4
+   }
+  },
+  "open": {
+   "n": 4,
+   "mean": 3,
+   "median": 3.0,
+   "min": 2,
+   "max": 4,
+   "q1": 3,
+   "q3": 3,
+   "counts": {
+    "2": 1,
+    "3": 2,
+    "4": 1
+   }
+  }
+ },
+ "question_rating_by_policy": {
+  "always_ask": {
+   "n": 3,
+   "mean": 2.67,
+   "median": 2,
+   "min": 1,
+   "max": 5,
+   "q1": 1,
+   "q3": 5,
+   "counts": {
+    "1": 1,
+    "2": 1,
+    "5": 1
+   }
+  },
+  "confidence_threshold": {
+   "n": 2,
+   "mean": 5,
+   "median": 5.0,
+   "min": 5,
+   "max": 5,
+   "q1": 5,
+   "q3": 5,
+   "counts": {
+    "5": 2
+   }
+  },
+  "evpi": {
+   "n": 3,
+   "mean": 3.67,
+   "median": 3,
+   "min": 3,
+   "max": 5,
+   "q1": 3,
+   "q3": 5,
+   "counts": {
+    "3": 2,
+    "5": 1
+   }
+  },
+  "nm_voi": {
+   "n": 3,
+   "mean": 3.67,
+   "median": 4,
+   "min": 2,
+   "max": 5,
+   "q1": 2,
+   "q3": 5,
+   "counts": {
+    "2": 1,
+    "4": 1,
+    "5": 1
+   }
+  },
+  "noise_indep_voi": {
+   "n": 2,
+   "mean": 5,
+   "median": 5.0,
+   "min": 5,
+   "max": 5,
+   "q1": 5,
+   "q3": 5,
+   "counts": {
+    "5": 2
+   }
+  }
+ },
+ "question_rating_by_final_outcome": {
+  "success": {
+   "n": 9,
+   "mean": 4.56,
+   "median": 5,
+   "min": 2,
+   "max": 5,
+   "q1": 5,
+   "q3": 5,
+   "counts": {
+    "2": 1,
+    "4": 1,
+    "5": 7
+   }
+  },
+  "wrong": {
+   "n": 1,
+   "mean": 1,
+   "median": 1,
+   "min": 1,
+   "max": 1,
+   "q1": 1,
+   "q3": 1,
+   "counts": {
+    "1": 1
+   }
+  },
+  "abstain": {
+   "n": 3,
+   "mean": 2.67,
+   "median": 3,
+   "min": 2,
+   "max": 3,
+   "q1": 2,
+   "q3": 3,
+   "counts": {
+    "2": 1,
+    "3": 2
+   }
+  }
+ },
+ "reply_appropriateness": {
+  "Y": 12,
+  "N": 1
+ },
+ "audio_asr_consistency": {
+  "N": 3,
+  "Y": 16,
+  "unsure": 1
+ },
+ "final_action_correct": {
+  "unsure": 2,
+  "Y": 14,
+  "N": 4
+ },
+ "overall_valid": {
+  "unsure": 3,
+  "Y": 17
+ },
+ "blank_consistency": {
+  "not_asked_blank_q_and_r": true,
+  "asked_filled_q_and_r": true
+ },
+ "asr_flag_vs_human": {
+  "auto_transcript_differs": [
+   "D01",
+   "D03",
+   "D04",
+   "D08"
+  ],
+  "human_not_Y": [
+   "D01",
+   "D03",
+   "D04",
+   "D08"
+  ],
+  "identical_sets": true
+ },
+ "final_action_answered": {
+  "n": 14,
+  "agree": 13,
+  "wilson95": [
+   0.685,
+   0.987
+  ],
+  "disagree": [
+   [
+    "D10",
+    "wrong",
+    "Y"
+   ]
+  ]
+ },
+ "final_action_abstained": {
+  "n": 6,
+  "human": {
+   "D01": "unsure",
+   "D03": "unsure",
+   "D08": "N",
+   "D16": "Y",
+   "D17": "N",
+   "D18": "N"
+  },
+  "initial_map_correct": {
+   "D01": false,
+   "D03": true,
+   "D08": false,
+   "D16": false,
+   "D17": true,
+   "D18": false
+  }
+ },
+ "clarification_effect": {
+  "confirmed (initial MAP right -> final right)": 5,
+  "reply_unusable; abstained (initial MAP was right)": 2,
+  "reply_unusable; success from prior": 1,
+  "rescued (initial MAP wrong -> final right)": 3,
+  "reply_unusable; abstained (initial MAP wrong)": 1,
+  "failed (final wrong)": 1
+ },
+ "F10_flagged": [
+  "D02",
+  "D03",
+  "D04",
+  "D05",
+  "D12",
+  "D13",
+  "D15",
+  "D17"
+ ],
+ "analyst_failure_class_counts_by_dialogue": {
+  "ASR_INIT": 3,
+  "POLICY_ASK": 7,
+  "ASR_REPLY": 2,
+  "POLICY_Q": 4,
+  "PARSER": 3,
+  "NONE": 5,
+  "TIE": 3,
+  "BELIEF": 1
+ },
+ "snr_vs_category_of_failure": {
+  "D01": [
+   "10",
+   "ASR_INIT"
+  ],
+  "D02": [
+   "20",
+   "POLICY_ASK"
+  ],
+  "D03": [
+   "20",
+   "ASR_INIT+ASR_REPLY+POLICY_Q"
+  ],
+  "D04": [
+   "clean",
+   "ASR_REPLY+PARSER"
+  ],
+  "D05": [
+   "clean",
+   "POLICY_ASK"
+  ],
+  "D07": [
+   "5",
+   "TIE"
+  ],
+  "D08": [
+   "5",
+   "ASR_INIT+POLICY_ASK"
+  ],
+  "D10": [
+   "clean",
+   "TIE"
+  ],
+  "D12": [
+   "20",
+   "POLICY_ASK"
+  ],
+  "D13": [
+   "20",
+   "POLICY_ASK"
+  ],
+  "D15": [
+   "5",
+   "BELIEF+POLICY_ASK"
+  ],
+  "D16": [
+   "10",
+   "PARSER+POLICY_Q"
+  ],
+  "D17": [
+   "10",
+   "PARSER+POLICY_Q"
+  ],
+  "D18": [
+   "10",
+   "POLICY_ASK"
+  ],
+  "D20": [
+   "clean",
+   "POLICY_Q+TIE"
+  ]
+ },
+ "d01": {
+  "audio_asr": "N",
+  "final_correct": "unsure",
+  "overall": "unsure",
+  "note": "I clearly heard \"Call mom\"; ASR produced \"Come on\". Agent abstained without clarification, avoiding an unverified action but not completing the task. Whether clarification was preferable remains unresolved."
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "n_dev_clips": 160,
+ "nm_vs_noise_indep_initial_action_differs": 5,
+ "nm_vs_noise_indep_final_outcome_differs": 0,
+ "nm_vs_noise_indep_utility_differs": 5,
+ "differ_by_snr": {
+  "20": 3,
+  "5": 1,
+  "10": 1
+ },
+ "utility_by_split": {
+  "train": {
+   "n_clips": 120,
+   "n_items": 30,
+   "nm_voi": 0.6558,
+   "noise_indep_voi": 0.6592,
+   "evpi": 0.6292,
+   "always_ask": 0.65,
+   "confidence_threshold": 0.6867,
+   "never_ask": 0.2667
+  },
+  "val": {
+   "n_clips": 40,
+   "n_items": 10,
+   "nm_voi": 0.6525,
+   "noise_indep_voi": 0.66,
+   "evpi": 0.74,
+   "always_ask": 0.25,
+   "confidence_threshold": 0.35,
+   "never_ask": 0.0
+  }
+ },
+ "nm_voi_flag_counts": {
+  "F6": 82,
+  "F10": 54,
+  "F8": 25,
+  "F13": 6,
+  "F2": 19,
+  "F1": 18,
+  "F7": 1
+ },
+ "nm_voi_asked": {
+  "nm_voi_episodes": 160,
+  "nm_voi_asked": 108,
+  "reply_used": 89,
+  "reply_asr_exact": 90
+ },
+ "none_category_never_ask_success": 0.955,
+ "none_category_near_tie_rate": 0.182,
+ "snr_bucket_confusion_nominal_vs_est": {
+  "10->10": 39,
+  "10->5": 1,
+  "20->20": 40,
+  "5->5": 40,
+  "None->clean": 40
+ },
+ "nm_voi_question_type_x_reply_type": {
+  "closed/none_of_these": 1,
+  "closed/select": 55,
+  "confirm/no_bare": 3,
+  "confirm/yes": 30,
+  "open/answer": 19
+ },
+ "nm_voi_reply_provenance": {
+  "phase2_inventory": 58,
+  "has_audio_file": 108,
+  "has_asr_record": 108,
+  "ondemand": 50
+ },
+ "channel_fit_on": "train",
+ "channel_train_total_trials": 624,
+ "train_reply_clip_noise_partitions": {
+  "train": 414
+ },
+ "val_reply_clip_noise_partitions": {
+  "val": 138
+ }
+}

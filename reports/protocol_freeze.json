@@ -1,0 +1,34 @@
+{
+ "files": {
+  "src/ontology.py": "125213c4cf792c4bc81bea39c145e1d14ec806a9087ba003029f8b8ed93a8632",
+  "src/channel.py": "40c893533098310a6fd0d1753c32f75f369f3de14cab450c24c95629ba4a998b",
+  "src/nmvoi.py": "6e3d0b3db4e649d87be41e145f7d464a56ab9858dbe7d380620b5782c6731aed",
+  "src/simulator.py": "b90d53a3102773fa2c77dc4e820f36452a83327aa8e27452c2dc5ae3ee26baa4",
+  "src/audio_service.py": "58313a457e4ddea8ee0a6993d81dbdec7c7ee06334e6995941c571f73d20a57d",
+  "src/evalutil.py": "e3ee6096e4d16bf8511b29053a74d76028222cb1030005bd0c4baf8b23038c46",
+  "scripts/run_episodes.py": "1923b57d0b048de790fe89661b7f7c47c6bec49c04180a78af88bcaf1528d921",
+  "scripts/analyze_results.py": "59bb55335731fcd8d363526e6ddf020fe8ed23987e1ef50028f99a3b76f35604",
+  "scripts/tune_policies.py": "4bcaa7288cea72e6d71fe330d725b6e941fce29ea606044f7e88a3f0da643f22",
+  "scripts/estimate_channel.py": "0630517e17b2a7a98cd3d545b7f43d13357eeb2e5d959210cb923c3a82826113",
+  "scripts/fit_snr_estimator.py": "6b6fd3e4c8195d14cfe726fe88868c42a1a166e3162d55cd8fc9d7212c4aa19f",
+  "scripts/phase3_task_inference.py": "0be2dbe47fb2707e5d8659d727a775792eb128b7145eb62a38d4fca734a8e476",
+  "scripts/build_catalogue.py": "98e5920e0445c11a804313202f9acdb077063002e149308ed867de8b59442f29",
+  "configs/default.yaml": "48756fc432dc4d010f7da82dd7128da982cded49ac6da2588977b39d0e7e12fe",
+  "configs/phase2_audio.yaml": "77df3e711d612b122199d5173992fed2709a6edd2c4933146b131e8d9077ba9d",
+  "data/phase3/catalogue.v1.json": "7a4c4785e4e8a2caab258b19d7f5730abd5382577b99da92f85fa6e8527ba164",
+  "data/phase3/calibration.v1.json": "d686b3448f13c1ef7ef78ab00207bbb1066c6da5132c76ab339c3400362f43af",
+  "data/phase4/channel.v1.json": "bc677190a019db9cbba436ce79621b3c3dd0d2888c29423077ceb49675b0da81",
+  "data/phase4/snr_estimator.v1.json": "5d65f68138a272f5644caca09d1a1f579cfba974eab83375bf141682714af9e1",
+  "data/phase5/tuned.json": "7560ca4db21c221fd7b35f3beeedfaa518f7d36a046f2cca49511ce38876eb80",
+  "data/phase2/audio.v1/audio_manifest.jsonl": "a332245965df0cc0506c77205f77f0a6b64ff0df6adc095006c1603d578893fd",
+  "data/phase3/asr.v1/config.json": "0e1920c7b82fb7bfbc9d4ac98adc30e4f03d3c7ad6fef2b182d627a716e5a942"
+ },
+ "costs": "src/nmvoi.py: Costs(open=0.30, closed=0.20, confirm=0.10); reward +1/-1/0",
+ "primary_metrics": [
+  "task success rate",
+  "mean clarification turns",
+  "mean utility (reward - interaction cost)"
+ ],
+ "test_split_policy": "opened once, after this file was written; no tuning on it",
+ "note": "human semantic review of the dataset is deferred; all data synthetic"
+}

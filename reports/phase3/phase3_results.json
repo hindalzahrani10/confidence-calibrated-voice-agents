@@ -1,0 +1,519 @@
+{
+  "splits": [
+    "train",
+    "val"
+  ],
+  "calibration": {
+    "beta": 2.2031638774717996,
+    "fit_on": "train",
+    "n_fit_variants": 120,
+    "train_nll_at_beta": 1.0651889104677055,
+    "grid": [
+      0.02,
+      19.999999999999996
+    ],
+    "asr_results_sha256": "2388d47c14977f77",
+    "grammar_sha256": "125213c4cf792c4b"
+  },
+  "asr": {
+    "by_snr": {
+      "train/clean": {
+        "n": 30,
+        "WER": 0.029850746268656716,
+        "CER": 0.03134328358208955,
+        "mean_runtime_s": 5.880466666666667
+      },
+      "train/20": {
+        "n": 30,
+        "WER": 0.03731343283582089,
+        "CER": 0.034328358208955224,
+        "mean_runtime_s": 5.770266666666669
+      },
+      "train/10": {
+        "n": 30,
+        "WER": 0.05223880597014925,
+        "CER": 0.041791044776119404,
+        "mean_runtime_s": 5.824366666666666
+      },
+      "train/5": {
+        "n": 30,
+        "WER": 0.08955223880597014,
+        "CER": 0.06119402985074627,
+        "mean_runtime_s": 5.817266666666666
+      },
+      "val/clean": {
+        "n": 10,
+        "WER": 0.0,
+        "CER": 0.0,
+        "mean_runtime_s": 5.897999999999999
+      },
+      "val/20": {
+        "n": 10,
+        "WER": 0.0,
+        "CER": 0.0,
+        "mean_runtime_s": 5.9642
+      },
+      "val/10": {
+        "n": 10,
+        "WER": 0.0,
+        "CER": 0.0,
+        "mean_runtime_s": 6.0533
+      },
+      "val/5": {
+        "n": 10,
+        "WER": 0.038461538461538464,
+        "CER": 0.012195121951219513,
+        "mean_runtime_s": 5.942
+      }
+    },
+    "by_category": {
+      "train/none": {
+        "n": 32,
+        "WER": 0.023255813953488372,
+        "CER": 0.037914691943127965
+      },
+      "train/acoustic": {
+        "n": 32,
+        "WER": 0.12857142857142856,
+        "CER": 0.08378378378378379
+      },
+      "train/intent": {
+        "n": 28,
+        "WER": 0.044642857142857144,
+        "CER": 0.026845637583892617
+      },
+      "train/underspecified": {
+        "n": 28,
+        "WER": 0.008928571428571428,
+        "CER": 0.006
+      },
+      "val/none": {
+        "n": 12,
+        "WER": 0.0,
+        "CER": 0.0
+      },
+      "val/acoustic": {
+        "n": 8,
+        "WER": 0.0,
+        "CER": 0.0
+      },
+      "val/intent": {
+        "n": 12,
+        "WER": 0.0,
+        "CER": 0.0
+      },
+      "val/underspecified": {
+        "n": 8,
+        "WER": 0.08333333333333333,
+        "CER": 0.03125
+      }
+    },
+    "by_snr_category": {
+      "train/none/clean": {
+        "n": 8,
+        "WER": 0.023255813953488372
+      },
+      "train/none/20": {
+        "n": 8,
+        "WER": 0.023255813953488372
+      },
+      "train/none/10": {
+        "n": 8,
+        "WER": 0.023255813953488372
+      },
+      "train/none/5": {
+        "n": 8,
+        "WER": 0.023255813953488372
+      },
+      "train/acoustic/clean": {
+        "n": 8,
+        "WER": 0.08571428571428572
+      },
+      "train/acoustic/20": {
+        "n": 8,
+        "WER": 0.08571428571428572
+      },
+      "train/acoustic/10": {
+        "n": 8,
+        "WER": 0.14285714285714285
+      },
+      "train/acoustic/5": {
+        "n": 8,
+        "WER": 0.2
+      },
+      "train/intent/clean": {
+        "n": 7,
+        "WER": 0.0
+      },
+      "train/intent/20": {
+        "n": 7,
+        "WER": 0.03571428571428571
+      },
+      "train/intent/10": {
+        "n": 7,
+        "WER": 0.03571428571428571
+      },
+      "train/intent/5": {
+        "n": 7,
+        "WER": 0.10714285714285714
+      },
+      "train/underspecified/clean": {
+        "n": 7,
+        "WER": 0.0
+      },
+      "train/underspecified/20": {
+        "n": 7,
+        "WER": 0.0
+      },
+      "train/underspecified/10": {
+        "n": 7,
+        "WER": 0.0
+      },
+      "train/underspecified/5": {
+        "n": 7,
+        "WER": 0.03571428571428571
+      },
+      "val/none/clean": {
+        "n": 3,
+        "WER": 0.0
+      },
+      "val/none/20": {
+        "n": 3,
+        "WER": 0.0
+      },
+      "val/none/10": {
+        "n": 3,
+        "WER": 0.0
+      },
+      "val/none/5": {
+        "n": 3,
+        "WER": 0.0
+      },
+      "val/acoustic/clean": {
+        "n": 2,
+        "WER": 0.0
+      },
+      "val/acoustic/20": {
+        "n": 2,
+        "WER": 0.0
+      },
+      "val/acoustic/10": {
+        "n": 2,
+        "WER": 0.0
+      },
+      "val/acoustic/5": {
+        "n": 2,
+        "WER": 0.0
+      },
+      "val/intent/clean": {
+        "n": 3,
+        "WER": 0.0
+      },
+      "val/intent/20": {
+        "n": 3,
+        "WER": 0.0
+      },
+      "val/intent/10": {
+        "n": 3,
+        "WER": 0.0
+      },
+      "val/intent/5": {
+        "n": 3,
+        "WER": 0.0
+      },
+      "val/underspecified/clean": {
+        "n": 2,
+        "WER": 0.0
+      },
+      "val/underspecified/20": {
+        "n": 2,
+        "WER": 0.0
+      },
+      "val/underspecified/10": {
+        "n": 2,
+        "WER": 0.0
+      },
+      "val/underspecified/5": {
+        "n": 2,
+        "WER": 0.3333333333333333
+      }
+    }
+  },
+  "task_inference": {
+    "train": {
+      "calibrated": {
+        "n": 120,
+        "joint_acc": 0.6333333333333333,
+        "intent_acc": 0.825,
+        "slot_acc": 0.831845238095238,
+        "ECE": 0.12484702550521914,
+        "Brier": 0.1615469782232824,
+        "NLL": 1.0651889104677055,
+        "mean_conf": 0.5855123548455997
+      },
+      "uncalibrated_beta1": {
+        "n": 120,
+        "joint_acc": 0.6333333333333333,
+        "intent_acc": 0.825,
+        "slot_acc": 0.831845238095238,
+        "ECE": 0.2553653895740311,
+        "Brier": 0.23201033419089528,
+        "NLL": 1.3674375447122429,
+        "mean_conf": 0.4164496067664644
+      },
+      "by_snr": {
+        "clean": {
+          "n": 30,
+          "joint_acc": 0.6666666666666666,
+          "intent_acc": 0.8333333333333334,
+          "slot_acc": 0.8809523809523808,
+          "ECE": 0.1514951296702576,
+          "Brier": 0.15994236859246352,
+          "NLL": 0.9493556176824323,
+          "mean_conf": 0.5987238441530323
+        },
+        "20": {
+          "n": 30,
+          "joint_acc": 0.6333333333333333,
+          "intent_acc": 0.8,
+          "slot_acc": 0.8988095238095237,
+          "ECE": 0.183349481400474,
+          "Brier": 0.15690020400008023,
+          "NLL": 0.8937096461809566,
+          "mean_conf": 0.6023744227933722
+        },
+        "10": {
+          "n": 30,
+          "joint_acc": 0.6666666666666666,
+          "intent_acc": 0.8666666666666667,
+          "slot_acc": 0.8095238095238094,
+          "ECE": 0.15420206673359602,
+          "Brier": 0.1769115662342186,
+          "NLL": 1.0687123098715172,
+          "mean_conf": 0.5792754203335682
+        },
+        "5": {
+          "n": 30,
+          "joint_acc": 0.5666666666666667,
+          "intent_acc": 0.8,
+          "slot_acc": 0.738095238095238,
+          "ECE": 0.14620169836495558,
+          "Brier": 0.15243377406636735,
+          "NLL": 1.3489780681359165,
+          "mean_conf": 0.5616757321024269
+        }
+      },
+      "by_category": {
+        "none": {
+          "n": 32,
+          "joint_acc": 1.0,
+          "intent_acc": 1.0,
+          "slot_acc": 1.0,
+          "ECE": 0.039822566890690816,
+          "Brier": 0.01017135705299384,
+          "NLL": 0.046241375697350845,
+          "mean_conf": 0.9601774331093091
+        },
+        "acoustic": {
+          "n": 32,
+          "joint_acc": 0.875,
+          "intent_acc": 0.90625,
+          "slot_acc": 0.875,
+          "ECE": 0.20196071403716362,
+          "Brier": 0.11556889053295291,
+          "NLL": 0.964142683565122,
+          "mean_conf": 0.6819451128817104
+        },
+        "intent": {
+          "n": 28,
+          "joint_acc": 0.35714285714285715,
+          "intent_acc": 0.35714285714285715,
+          "slot_acc": 0.9583333333333334,
+          "ECE": 0.28897003485000505,
+          "Brier": 0.3415973248591872,
+          "NLL": 2.1109187373636487,
+          "mean_conf": 0.3855792160907658
+        },
+        "underspecified": {
+          "n": 28,
+          "joint_acc": 0.21428571428571427,
+          "intent_acc": 1.0,
+          "slot_acc": 0.5059523809523808,
+          "ECE": 0.2609080249208133,
+          "Brier": 0.207043727428084,
+          "NLL": 1.2994519540551208,
+          "mean_conf": 0.2470479664006393
+        }
+      }
+    },
+    "val": {
+      "calibrated": {
+        "n": 40,
+        "joint_acc": 0.5,
+        "intent_acc": 0.725,
+        "slot_acc": 0.825,
+        "ECE": 0.16146227412340355,
+        "Brier": 0.10554377840751136,
+        "NLL": 0.9620220893244682,
+        "mean_conf": 0.5093693222329841
+      },
+      "uncalibrated_beta1": {
+        "n": 40,
+        "joint_acc": 0.5,
+        "intent_acc": 0.725,
+        "slot_acc": 0.825,
+        "ECE": 0.17294759583595967,
+        "Brier": 0.11782678037286623,
+        "NLL": 1.558034042861987,
+        "mean_conf": 0.3713062394747671
+      },
+      "by_snr": {
+        "clean": {
+          "n": 10,
+          "joint_acc": 0.5,
+          "intent_acc": 0.8,
+          "slot_acc": 0.8,
+          "ECE": 0.0341103234105896,
+          "Brier": 0.11828509162434586,
+          "NLL": 0.9004429387194348,
+          "mean_conf": 0.5155592947794181
+        },
+        "20": {
+          "n": 10,
+          "joint_acc": 0.5,
+          "intent_acc": 0.6,
+          "slot_acc": 0.85,
+          "ECE": 0.23020010771223987,
+          "Brier": 0.0858841984259597,
+          "NLL": 0.8968627611423845,
+          "mean_conf": 0.517899810745569
+        },
+        "10": {
+          "n": 10,
+          "joint_acc": 0.4,
+          "intent_acc": 0.7,
+          "slot_acc": 0.8,
+          "ECE": 0.11706635915372075,
+          "Brier": 0.08164435992033271,
+          "NLL": 1.0233912445733362,
+          "mean_conf": 0.5046163448341436
+        },
+        "5": {
+          "n": 10,
+          "joint_acc": 0.6,
+          "intent_acc": 0.8,
+          "slot_acc": 0.85,
+          "ECE": 0.26968520695042336,
+          "Brier": 0.1363614636594072,
+          "NLL": 1.0273914128627168,
+          "mean_conf": 0.49940183857280623
+        }
+      },
+      "by_category": {
+        "none": {
+          "n": 12,
+          "joint_acc": 0.8333333333333334,
+          "intent_acc": 1.0,
+          "slot_acc": 0.9166666666666666,
+          "ECE": 0.1678773379588612,
+          "Brier": 0.16672739108956602,
+          "NLL": 0.46380470631466447,
+          "mean_conf": 0.6654559953744722
+        },
+        "acoustic": {
+          "n": 8,
+          "joint_acc": 1.0,
+          "intent_acc": 1.0,
+          "slot_acc": 1.0,
+          "ECE": 0.029931140749058893,
+          "Brier": 0.0015641665710006446,
+          "NLL": 0.03074342144303671,
+          "mean_conf": 0.9700688592509411
+        },
+        "intent": {
+          "n": 12,
+          "joint_acc": 0.16666666666666666,
+          "intent_acc": 0.16666666666666666,
+          "slot_acc": 1.0,
+          "ECE": 0.2771477894169805,
+          "Brier": 0.17453369659823745,
+          "NLL": 1.16994320493078,
+          "mean_conf": 0.3125008133653836
+        },
+        "underspecified": {
+          "n": 8,
+          "joint_acc": 0.0,
+          "intent_acc": 0.875,
+          "slot_acc": 0.25,
+          "ECE": 0.10984253880419628,
+          "Brier": 0.014263093934850996,
+          "NLL": 2.328745158311137,
+          "mean_conf": 0.10984253880419628
+        }
+      }
+    }
+  },
+  "top_confusions": [
+    {
+      "gold": "text Sam saying on my way",
+      "predicted": "text Sam saying running late",
+      "count": 4
+    },
+    {
+      "gold": "book 1 ticket to the Coldplay concert",
+      "predicted": "book 1 ticket to the comedy show",
+      "count": 4
+    },
+    {
+      "gold": "cancel your Friday food delivery",
+      "predicted": "cancel your Friday shopping order",
+      "count": 4
+    },
+    {
+      "gold": "turn the volume up on the living room speaker",
+      "predicted": "turn the volume up on the TV",
+      "count": 3
+    },
+    {
+      "gold": "cancel the dentist appointment",
+      "predicted": "cancel the haircut",
+      "count": 3
+    },
+    {
+      "gold": "set the living room temperature to 70",
+      "predicted": "set the living room speaker volume to 70 percent",
+      "count": 3
+    },
+    {
+      "gold": "text Jordan saying I'm running late",
+      "predicted": "text Jordan saying running late",
+      "count": 2
+    },
+    {
+      "gold": "set an alarm for 7 am",
+      "predicted": "set an alarm for 8 am",
+      "count": 2
+    },
+    {
+      "gold": "set a reminder for the meeting 60 minutes before",
+      "predicted": "set a reminder for the meeting 15 minutes before",
+      "count": 2
+    },
+    {
+      "gold": "set a reminder for the meeting 60 minutes before",
+      "predicted": "set a reminder for the meeting 30 minutes before",
+      "count": 2
+    },
+    {
+      "gold": "add milk to your grocery list",
+      "predicted": "add milk to your shopping list",
+      "count": 2
+    },
+    {
+      "gold": "record audio only",
+      "predicted": "record the screen",
+      "count": 2
+    }
+  ],
+  "note": "Gold transcripts and labels are used for evaluation only. TEST excluded unless frozen protocol exists."
+}
